@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Store and Retrive data</title>
+</head>
+<body>
+	<h2>Store and retrive data</h2>
+	<p id="demo"></p>
+
+	<script>
+		
+		// creating javaScript Object
+		myObj = {name: "Rashadul",  age: 20, city: "Dhaka"};
+
+
+		// Storing data.
+		myJSON = JSON.stringify(myObj);
+		localStorage.setItem("testJSON", myJSON);
+
+		// Retriving data.
+		text =  localStorage.getItem("testJSON");
+		obj = JSON.parse(text);
+		document.getElementById("demo").innerHTML = obj.name;
+
+
+	</script>
+</body>
+</html>

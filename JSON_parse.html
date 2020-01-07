@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON PARSE PUNCTION</title>
+</head>
+<body>
+	<h2>JSON parse() function</h2>
+	<div id="demo"></div>
+	<script>
+		var txt = '{"name":"Rashadul Alam", "age":29, "favcolor": "blue" }';
+
+		obj = JSON.parse(txt);
+		document.getElementById('demo').innerHTML = "Name :" + obj.name + " Age :" + obj.age + " Favourite Color :" + obj.favcolor;
+	</script>
+</body>
+</html>

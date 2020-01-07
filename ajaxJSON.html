@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax JSON</title>
+</head>
+<body>
+	ajax JSON
+	<div id="demo"></div>
+
+
+
+
+
+
+	<script>
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var myObj = JSON.parse(this.responseText);
+				document.getElementById('demo').innerHTML = myObj.name;
+			}
+		}
+		xmlhttp.open("GET", "json_demo.txt", true);
+		xmlhttp.send();
+	</script>
+</body>
+</html>
